@@ -30,7 +30,6 @@ public class ErrorJsonController {
         if (StringUtils.isEmpty(cityName)) {
             throw new GlobalErrorInfoException(CityErrorInfoEnum.PARAMS_NO_COMPLETE);
         }
-        int i = 1/0;
         return new ResultBody(new City(1L, 1L, cityName, "我的故乡"));
     }
 }

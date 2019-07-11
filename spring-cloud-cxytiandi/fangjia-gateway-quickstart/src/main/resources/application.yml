@@ -1,0 +1,13 @@
+server:
+  port: 8084
+
+#基于Path的匹配转发功能
+#当你访问http://localhost:8084/course的时候就会转发到http://cxytiandi.com/course
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://cxytiandi.com
+          predicates:
+            - Path=/course
